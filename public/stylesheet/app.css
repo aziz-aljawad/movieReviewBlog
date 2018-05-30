@@ -1,0 +1,16 @@
+i.film.icon
+{
+    font-size: 2em;
+}
+div.ui.container
+{
+    margin-top: 15px;
+}
+#deleteForm
+{
+    display: inline;
+}
+.centereBtns
+{
+    margin: 0 auto;
+}

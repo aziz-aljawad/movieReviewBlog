@@ -1,0 +1,39 @@
+<% include partials\header.ejs%>
+<div class="ui container">
+    <form class="ui form segment" action="/movies" method="POST">
+        <div class="field">
+            <label>Review Title</label>
+            <input type="text" name="review[reviewTitle]">                    
+        </div>
+        <div class="field">
+            <label> Movie Title</label>
+            <input type="text" name="review[title]">
+        </div>
+        <div class="field">
+            <label >Poster url</label>
+            <input type="text" name="review[poster_url]" >
+        </div>
+        <div class="field">
+            <label>Genre</label>
+            <input type="text" name="review[genre]" placeholder="action,adventure,fantasy">
+        </div>
+        <div class="field">
+            <label >Plot</label>
+            <textarea name="review[plot]"></textarea>
+        </div>
+        <div class="field">
+            <label>Rating</label>
+            <input type="number" name="review[Rating]" min="1" step=".5" max="10" maxlength="2" value="1">
+        </div>
+        <div class="field">
+            <label>Runtime</label>
+            <input type="number" name="review[runtime]" min="40" max="210" maxlength="3" value="40">
+        </div>
+        <div class="field">
+            <label>Review</label>
+            <textarea name="review[Review]"></textarea>            
+        </div>
+        <button type="submit" class="ui basic blue button">Post</button>
+    </form>
+</div>
+<% include partials\footer.ejs%>

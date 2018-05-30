@@ -1,0 +1,23 @@
+<% include partials\header.ejs%>
+<div class="ui container segment">
+  
+    <div class="ui item  segment">
+                <h1><%= review.reviewTitle %></h1>
+                <img class="ui small left floated rounded image" src="<%=review.poster_url%>">
+                <p>Movie Title:<%=review.title %></p>
+                <p>plot: <%= review.plot %></p>
+                <p>review: <%- review.Review %></p>
+                <p>Genre: <%= review.genre %></p>
+                <p>created On: <%=review.created %></p>
+                <p>runtime: <%= review.runtime %></p>
+                <div class="centereBtns">
+                    
+                    <a href='/movies/<%= review._id%>/edit' class=" ui basic  orange button"> Edit</a>
+                    <form id="deleteForm" action="/movies/<%= review._id%>?_method=DELETE" method="POST">
+                        <button class="ui basic  red button">Delete</button>
+                    </form>
+                </div>
+            </div>
+</div>
+    
+<% include partials\footer.ejs%>

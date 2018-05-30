@@ -1,0 +1,18 @@
+<% include partials\header.ejs%>
+<div class="ui container segment">
+    <%reviews.forEach(function(movieReview){%>
+    <div class="ui divided item segment">
+                <h1><%= movieReview.reviewTitle %></h1>
+                <img class="ui rounded small image" src="<%=movieReview.poster_url%>">
+                <p>Movie Title: <%=movieReview.title %></p>
+                <p>plot: <%= movieReview.plot %></p>
+                <p>movieReview: <%= movieReview.Review.substring(0,100) %></p>
+                <button class="ui basic blue button">
+                    <i class="ui forward icon"></i>
+                    <a href="/movies/<%= movieReview._id %>">Read more</a>
+                </button>
+            </div>
+    <%})%>
+</div>
+    
+<% include partials\footer.ejs%>
